@@ -3,6 +3,6 @@ services:
   - docker
 
 before_install:
-  - docker build -t Seth/Image -f Dockerfile.dev . 
+  - docker build -t seth/image -f Dockerfile.dev . 
 script:
   - docker run -e CI=true seth/image npm run test -- --coverage
